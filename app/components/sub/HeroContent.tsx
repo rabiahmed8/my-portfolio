@@ -20,9 +20,9 @@ const HeroContent = () => {
                 >
                     <SparklesIcon className='text-[#b49bff] mr-[10px] h-5 w-5'/>
                     <h1
-                    className='Welcome-text text-[13px]'
+                    className='Welcome-text text-[15px]'
                     >
-                      Fullstack Developer Portfolio
+                      Rabi Ahmed
                     </h1>
                 </motion.div>
 
