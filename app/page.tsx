@@ -6,8 +6,8 @@ import Nav from "./components/main/Nav";
 export default function Home() {
   return (
     <main className="h-full w-full margin-top-[400px]">
-      <div className="flex flex-col h-[850px] gap-20 ">
-        <Nav />
+      <div className="flex flex-col gap-20 ">
+
         <Hero />
         {/* <div className='z-10'><Products /></div> */}
       </div>
