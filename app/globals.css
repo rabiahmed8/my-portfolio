@@ -77,7 +77,20 @@
 .scrollbar-hidden::-webkit-scrollbar {
     display: none;
 }
+.fp-warning, .fp-watermark {
+  display: none;
+}
 
 html {
     scroll-behavior: smooth;
+}
+
+.mask {
+  -webkit-mask-image: url(/mask.svg);
+  mask-image: url(/mask.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  height: 511px;
+
+
 }
