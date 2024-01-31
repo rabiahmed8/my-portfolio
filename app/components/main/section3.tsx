@@ -9,7 +9,7 @@ const SliderComponent = ({ id }: { id: string }) => {
   return (
     <div
       id={id}
-      className="flex place-content-center can-1 absolute top-44 left-[783px]"
+      className="flex place-content-center can absolute top-44 left-[783px]"
     ></div>
   );
 };

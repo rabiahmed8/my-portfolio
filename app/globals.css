@@ -85,12 +85,34 @@ html {
   scroll-behavior: smooth;
 }
 
-.can {
+.can-1 {
   flex-shrink: 0;
   height: 558px;
   width: 310px;
   --left: -433px;
-  background: url(/section-two/pngs/knockio-contents.png) var(--left) 0
+  --url: url(/section-two/pngs/knockio-contents.png);
+  background: var(--url) var(--left) 0 no-repeat,
+    url(/section-two/pngs/can.png) no-repeat;
+  background-blend-mode: multiply;
+  -webkit-mask-image: url(/section-two/pngs/can.png);
+  -webkit-mask-size: 100% auto;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url(/section-two/pngs/can.png);
+  mask-size: 100% auto;
+  mask-repeat: no-repeat;
+  transition: background 1s ease-in-out;
+  -webkit-transition: background 1s ease-in-out;
+  -moz-transition: background 1s ease-in-out;
+  -ms-transition: background 1s ease-in-out;
+  -o-transition: background 1s ease-in-out;
+}
+
+.can-2 {
+  flex-shrink: 0;
+  height: 558px;
+  width: 310px;
+  --left: -600px;
+  background: url(/section-two/pngs/markytech-contents.png) var(--left) 0
       no-repeat,
     url(/section-two/pngs/can.png) no-repeat;
   background-blend-mode: multiply;
