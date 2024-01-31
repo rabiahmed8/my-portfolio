@@ -3,21 +3,20 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @keyframes custom-bounce {
-  0%, 100% {
-      transform: translateY(-7%);
-      animation-timing-function: cubic-bezier(0.8,0,1,1);
+  0%,
+  100% {
+    transform: translateY(-7%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
   50% {
-      transform: none;
-      animation-timing-function: cubic-bezier(0,0,0.2,1);
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
-.custom-bounce:hover{
+.custom-bounce:hover {
   animation: custom-bounce 1s infinite;
 }
-
 
 .cursive {
   font-family: "Cedarville Cursive", cursive;
@@ -75,22 +74,48 @@
   scrollbar-width: none; /* Firefox */
 }
 .scrollbar-hidden::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
-.fp-warning, .fp-watermark {
+.fp-warning,
+.fp-watermark {
   display: none;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-.mask {
-  -webkit-mask-image: url(/mask.svg);
-  mask-image: url(/mask.svg);
+.can {
+  flex-shrink: 0;
+  height: 558px;
+  width: 310px;
+  --left: -433px;
+  background: url(/section-two/pngs/knockio-contents.png) var(--left) 0
+      no-repeat,
+    url(/section-two/pngs/can.png) no-repeat;
+  background-blend-mode: multiply;
+  -webkit-mask-image: url(/section-two/pngs/can.png);
+  -webkit-mask-size: 100% auto;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url(/section-two/pngs/can.png);
+  mask-size: 100% auto;
   mask-repeat: no-repeat;
-  mask-position: center;
-  height: 511px;
-
-
+  transition: background 1s ease-in-out;
+  -webkit-transition: background 1s ease-in-out;
+  -moz-transition: background 1s ease-in-out;
+  -ms-transition: background 1s ease-in-out;
+  -o-transition: background 1s ease-in-out;
 }
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: white !important;
+}
+
+/* .content {
+  background: url(/section-two/pngs/knockio-contents.png) 0 0 no-repeat;
+  background-position: center;
+  background-blend-mode: multiply;
+  mix-blend-mode: multiply;
+} */
+/* url(/section-two/pngs/knockio-contents.png) 100px 0 no-repeat */
