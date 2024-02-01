@@ -1,23 +1,16 @@
 "use client";
-import Image from "next/image";
 import Hero from "./components/main/Hero";
-import Products from "./components/main/Product";
-import Nav from "./components/main/Nav";
 import ReactFullpage from "@fullpage/react-fullpage";
-import SliderComponent from "./components/main/FirstSlider";
-import SliderComponent1 from "./components/main/section3";
-import Navbar from "./components/main/Navbar";
-import { color } from "framer-motion";
 import FirstSlider from "./components/main/FirstSlider";
-import React from "react";
+import React, { useTransition } from "react";
 import SecondSlider from "./components/main/SecondSlider";
 
 export default function Home() {
   // const style = {
   //   "--url": "url('/section-two/pngs/knockio-contents.png')",
   // } as React.CSSProperties;
-
   const [silderColor, setSliderColor] = React.useState("#9effc9");
+  const [isPending, startTransition] = useTransition();
 
   return (
     <main>
@@ -44,7 +37,7 @@ export default function Home() {
           const markytech = cans2[0] as HTMLElement;
 
           if (section.index == 1 && origin.index == 0 && direction == "right") {
-            knockio.style.setProperty("--left", "-300px");
+            knockio.style.setProperty("--left", "-360px");
             markytech.style.setProperty("--left", "-433px");
             color?.style.setProperty("background-color", "#afffec");
             color?.style.setProperty(
@@ -52,25 +45,14 @@ export default function Home() {
               "background-color 1000ms linear"
             );
             setTimeout(() => {
-              knockio.style.setProperty(
-                "animation",
-                "fade-out 200ms ease-in-out"
-              );
-              knockio.style.setProperty("opacity", "0");
-              setTimeout(() => {
-                knockio.style.removeProperty("animation");
-              }, 1000);
-            }, 600);
-
-            // setTimeout(() => {
-            //   knockio.style.setProperty("--z", "1");
-            //   markytech.style.setProperty("--z", "2");
-            //   // setSliderColor("rgb(175 255 236)");
-            // }, 600);
+              knockio.style.setProperty("--z", "1");
+              markytech.style.setProperty("--z", "2");
+              // setSliderColor("rgb(175 255 236)");
+            }, 400);
           }
 
           if (section.index == 1 && origin.index == 1 && direction == "left") {
-            markytech.style.setProperty("--left", "-576px");
+            markytech.style.setProperty("--left", "-516px");
             knockio.style.setProperty("--left", "-433px");
             color?.style.setProperty("background-color", "#9effc9");
             color?.style.setProperty(
@@ -78,20 +60,9 @@ export default function Home() {
               "background-color 1000ms linear"
             );
             setTimeout(() => {
-              knockio.style.setProperty(
-                "animation",
-                "fade-in 200ms ease-in-out"
-              );
-              knockio.style.setProperty("opacity", "1");
-              setTimeout(() => {
-                knockio.style.removeProperty("animation");
-              }, 1000);
-            }, 600);
-
-            // setTimeout(() => {
-            //   knockio.style.setProperty("--z", "2");
-            //   markytech.style.setProperty("--z", "1");
-            // }, 400);
+              knockio.style.setProperty("--z", "2");
+              markytech.style.setProperty("--z", "1");
+            }, 400);
           }
         }}
         render={({ state, fullpageApi }) => {
